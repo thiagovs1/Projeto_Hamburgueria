@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+
+<title>CerradoBurguer</title>
+
+<style>
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: #fdf3dd; margin: 0; font-family: Georgia, Arial, Helvetica, sans-serif;
+}
+
+.topo {
+    background-color: #fdf3dd; display: flex; align-items: center; justify-content: center;
+    gap: 40px; padding: 5px 50px; position: fixed; width: 100%;  z-index: 1000;
+}
+
+.logo { width: 100px; }
+
+.menu {
+    display: flex; gap: 70px;
+}
+
+.menu a {
+    text-decoration: none; color:#481c11; font-size: 20px;
+}
+
+.menu a:hover { color: #f36f40; }
+ 
+.icons {
+    display: flex; gap: 10px;
+}
+ 
+.icons img { width: 45px; }
+
+section {
+    min-height: 100vh; padding: 120px 40px 40px; display: flex; justify-content: center; 
+    align-items: center; flex-direction: column;
+}
+
+#inicio {
+    position: relative; height: 100vh; background-image: url("amburgueres.png"); background-position: center;
+    background-size: cover; 
+}
+
+.tela-preta {
+    position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.5);
+}
+
+.inicio-conteudo {
+    position: relative; display: flex; gap: 50px;
+}
+
+.card-destaque {
+    background: #c65a2e; width: 500px; height: 300px; border-radius: 25px; padding: 6px; display: flex;
+    align-items: center; position: relative;
+}
+
+.card-destaque.escuro { background: #a14724; }
+
+.numero {
+    font-size: 100px; font-weight: bold; color: white; margin-right: 10px; height: 35vh;
+}
+
+.info { color: white; }
+
+.info h2 {
+   font-size: 38px; margin: 2px; 
+}
+
+.preco {
+    margin-top: 6px; padding: 5px 10px; border-radius: 100px; font-size: 40px;
+}
+
+.card-destaque img {
+    position: absolute; right: 50px; bottom: 10px; width: 200px; border-radius: 30px
+}
+
+#promocoes { background-color: #f1dfb6; }
+
+.proms {
+    display: flex; gap: 26px; max-width: 1300px; margin: 0 auto;     
+}
+
+.promocoes h3 {
+    text-align: center;
+}
+
+.promo-card {
+    width: 220px; padding: 15px; border-radius: 15px; border: 2px solid #333; position: relative; 
+    font-size: 18px; margin-top: -100px;
+}
+
+.claro { background: #f3e7d3; }
+.marrom { background: #8b4a20; color: white; }
+.amarelo { background: #fce8bd; }
+.pao { background: #cb962e; }
+.carne { background: #884927; }
+
+.promo-card img {
+    width: 80px; display: block; margin: 10px auto;
+}
+
+.promo-card ul { padding-left: 20px; }
+
+.preco-antigo {
+    text-decoration: line-through; font-weight: bold; text-align: center;
+}
+
+.preco-novo {
+    color: #ff5a1f; font-weight: bold; text-align: center; font-size: 18px;
+}
+
+#cardapio {
+    background-color: #f1dfb6; 
+}
+
+.cards {
+    display: flex; gap: 40px; 
+}
+
+.card {
+    width: 200px; height: 340px; border-radius: 25px; border: 3px solid black; display: flex;
+    flex-direction: column; align-items: center; padding: 28px; margin-top: -100px;
+}
+
+.card h3 {
+    font-size: 15px; font-weight: bold; text-decoration: underline; color: white;
+}
+
+.card1{ background:#8b4a20; }
+.card2{ background:#c69a73; }
+.card3{ background:#d6781e; }
+.card4{ background:#6b1f00; }
+
+.card img {
+    width: 200px; height: 200px; object-fit: contain;
+}
+
+#hamburgueres {
+    background-color: #f1dfb6; text-align: center;
+}
+
+#hamburgueres h3 {
+    margin-bottom: 50px; font-size: 40px; color: #481c11; margin-top: -100px;
+}
+
+/* Bebidas e Hambúrgueres*/
+.lista-burgers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px 80px; max-width: 1000px; width: 100%;
+}
+
+.burger-item {
+    width: 90%; margin: 0 auto; padding: 20px; border-radius: 40px; display: flex; align-items: center;
+    justify-content: space-between; position: relative; font-size: 20px;
+}
+
+.burger-item img {
+    width: 40px; border-radius: 15px;
+}
+
+.burger-item p {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.burger-item span {
+    font-weight: bold;
+}
+/* + */
+.burger-item .add {
+    margin-left: 10px; color: white;  background: black; width: 30px; height: 30px; border-radius: 50%; display: flex; 
+    justify-content: center; align-items: center; cursor: pointer;
+}
+
+/* Tela inicial e Promoção +*/
+.add {
+    position: absolute; bottom: 10px; right: 5px; background: black; color: white; width: 25px; height: 25px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; 
+}
+
+#bebidas {
+    background-color: #f1dfb6;
+}
+
+#bebidas h1 {
+    margin-bottom: 50px; font-size: 40px; color: #481c11; margin-top: -100px;
+}
+
+</style>
+</head>
